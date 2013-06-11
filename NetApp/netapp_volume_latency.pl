@@ -222,6 +222,6 @@ $timestamp=localtime($timestamp);
 #
 if (not defined($vol_name)) {$plugin->nagios_exit(UNKNOWN, "Volume Does not exist");};
 $plugin->add_perfdata(label=> "$counter",value=> $actuallatency,uom=> "ms",warning=> $warning,critical=> $critical);
-if ($actuallatency>$critical){$plugin->nagios_exit(CRITICAL, "$vol_name $counter: $actuallatency");}
-if ($actuallatency>$warning){$plugin->nagios_exit(WARNING, "$vol_name $counter: $actuallatency");}
+if ($actuallatency>$critical){$plugin->nagios_exit(CRITICAL, "$vol_name $counter: $actuallatency ms");}
+if ($actuallatency>$warning){$plugin->nagios_exit(WARNING, "$vol_name $counter: $actuallatency ms");}
 $plugin->nagios_exit(OK, "$vol_name $counter: $actuallatency ms");
