@@ -24,7 +24,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-
+$ENV{PERL_LWP_SSL_VERIFY_HOSTNAME} = 0;
 use strict;
 use warnings;
 use vars qw($PROGNAME $VERSION $output $values $result $defperfargs);
